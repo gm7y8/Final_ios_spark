@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DRP-vX-L8K">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="dfb-Qr-Kaa">
+            <objects>
+                <viewController storyboardIdentifier="mobilepeer" id="FzC-sv-Pem" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Jz-29-CWV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xdt-fL-vI5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eah-MZ-wab">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRo-Rd-b5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1405" y="-785"/>
+        </scene>
+        <!--App View Controller-->
+        <scene sceneID="UIf-gG-kDt">
+            <objects>
+                <viewController id="6Yo-FR-wyG" customClass="AppViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1OR-kv-kXG"/>
+                        <viewControllerLayoutGuide type="bottom" id="NN9-dH-HTj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0h0-hw-9gd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kf6-nc-jPT">
+                                <rect key="frame" x="46" y="149" width="228" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp5-9g-fKK">
+                                <rect key="frame" x="118" y="211" width="84" height="75"/>
+                                <state key="normal" backgroundImage="microphone-icon-614x460.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordButtonTapped:" destination="6Yo-FR-wyG" eventType="touchUpInside" id="lHp-Va-Ghr"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QFv-WH-urt">
+                                <rect key="frame" x="284" y="154" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ox2-e0-i9B"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="city" destination="Kf6-nc-jPT" id="xoM-zp-ZJP"/>
+                        <outlet property="load" destination="QFv-WH-urt" id="ZQn-DN-PGd"/>
+                        <outlet property="search" destination="yp5-9g-fKK" id="6y9-OP-UdA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="foE-IC-4Su" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1405" y="-211"/>
+        </scene>
+        <!--WeatherVC-->
+        <scene sceneID="dXI-RG-hpb">
+            <objects>
+                <viewController storyboardIdentifier="weather" id="B87-ov-8RO" customClass="weatherVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LIC-u7-kJh"/>
+                        <viewControllerLayoutGuide type="bottom" id="QGQ-I9-mzv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="14A-Ko-kbW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mlu-LN-ESN">
+                                <rect key="frame" x="43" y="106" width="234" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9i-Um-xD5">
+                                <rect key="frame" x="113" y="164" width="94" height="89"/>
+                                <state key="normal" backgroundImage="microphone-icon-614x460.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="taptell:" destination="B87-ov-8RO" eventType="touchUpInside" id="HRd-zD-bQe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="cityname" destination="Mlu-LN-ESN" id="sGu-dg-zaV"/>
+                        <outlet property="searchcommand" destination="x9i-Um-xD5" id="NYk-od-ajq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KyH-lB-n8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="153"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HTR-3e-arC">
+            <objects>
+                <navigationController id="DRP-vX-L8K" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vnh-qD-mr6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6Yo-FR-wyG" kind="relationship" relationship="rootViewController" id="wH0-eU-5w8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kjr-EX-fqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="-541"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="microphone-icon-614x460.png" width="614" height="460"/>
+    </resources>
+</document>
